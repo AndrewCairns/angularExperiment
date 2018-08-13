@@ -3,12 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 
-@Component({
-  selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css']
+@Component({                                //decorator function - defines element to be generated and added to document
+  selector: 'app-heroes',                   //name of element (extended from HTML)
+  templateUrl: './heroes.component.html',   //HTML inside the above 'element'
+  styleUrls: ['./heroes.component.css']     //CSS for the above 'element'
 })
+
 export class HeroesComponent implements OnInit {
+ 
   heroes: Hero[];
 
   constructor(private heroService: HeroService) { }
